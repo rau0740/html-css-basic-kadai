@@ -67,7 +67,7 @@ footer {
   }
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   h2 {
     font-size: 30px;
 
@@ -75,8 +75,8 @@ footer {
     font-size: 25px;
   }
 
-  parent {
-  display: block;
+  #parent {
+    display: flex;
+    flex-direction: column;
   }
-}
 }

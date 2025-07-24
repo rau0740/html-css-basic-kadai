@@ -8,7 +8,7 @@ p {
   font-size: 15px;
 }
 
-#main-visual>img {
+#main-visual > img {
   width: 100%;
 }
 
@@ -101,13 +101,6 @@ SP用のスタイル
     z-index: 100;
   }
 
-  /* ×ボタン */
-  #close {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-  }
-
   #nav-sp nav ul {
     padding-left: 0;
   }
@@ -116,29 +109,37 @@ SP用のスタイル
     list-style: none;
   }
 
+  /* ×ボタン */
+  #close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
   /* ナビゲーションメニュー用ロゴ */
-  #logo-sp nav a {
+  #logo-sp {
     margin: 80px 0 30px 20px;
   }
 
-  #nav-sp nav a {
+  #nav-sp a {
     display: block;
   }
   
-  #nav-sp nav a:link {
+  #nav-sp a:link {
     color: #ffffff;
   }
 
-  #nav-sp nav a:visited {
+  #nav-sp a:visited {
     color: #ffffff;
   }
   
-  #nav-sp nav a:hover {
+  /* スマホ用ナビゲーションのホバースタイル */
+  #nav-sp a:hover {
     color: #ffffff;
     text-decoration: underline;
   }
 
-  #nav-sp nav a:active {
+  #nav-sp a:active {
     color: #ffffff;
   }
 
@@ -151,5 +152,15 @@ SP用のスタイル
     background-image: url("images/arrow.png");
     background-repeat: no-repeat;
     background-position: right top;
+  }
+
+  /* PCの画面幅の場合にSPのナビゲーションを非表示にする */
+  @media only screen and (min-width: 7687px) {
+    #menu-sp {
+      display: none;
+    }
+    #nav-sp {
+      display: none;
+    }
   }
 }
